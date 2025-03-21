@@ -15,11 +15,11 @@ For some skills on this list, we'll specifically call out the equivalent tasks a
   - When to use deep learning vs classical machine learning
   - Generative AI for images, text, and audio
 - AB testing
- - pros and cons of AB testing vs simple metrics monitoring
- - Basic AB testing statistics
-   - p-values, T-test, etc
-   - power analysis
-   - Seasonality gotchas
+  - pros and cons of AB testing vs simple metrics monitoring
+  - Basic AB testing statistics
+    - p-values, T-test, etc
+    - power analysis
+    - Seasonality gotchas
 - Software Engineering
   - Basic data structures and when to use them (lists, hashmaps/dictionaries, trees).  The ability the solve simple problems using these data structures and reason about your solutions's time and space complexity (aka "leetcoding", but usually focused on easy-to-medium problems using mostly arrays).
   - basic pros/cons and uses of compiled languages (e.g. c++, Java) vs interpreted languages (python).
