@@ -15,12 +15,15 @@ For some skills on this list, we'll specifically call out the equivalent skills 
   - astronomy equivalent: Derive measurable quantities that directly probe the physics of object class X.  Report out these quantities to the astro community and draw conclusions about X.
   - industry: Derive measurable quantities that directly probe the behavior of all customers or important subsets of customers.  Build a dashboard webpage that is automatically updated from your company's database to allow the company to make informed decision with real-time information.
 - Machine Learning
-  - classical vs Deep Learning
+  - evaluation: data splitting, metrics for classification, ranking, and regression.
+  - classical vs deep Learning
   - linear models
   - tree-based models
   - deep Learning's particular success for images, text, and audio
   - when to use deep learning vs classical machine learning
-  - generative AI for images, text, and audio
+  - generative AI for images, text, and audio (approximate umbrella term: "LLMs")
+     - familiarity with basic prompting techniques and evaluations
+     - Understanding of pros and cons of prompted LLMs vs small fine-tuned models
   - astronomy equivalents: besides straightforward ML applied to science (e.g. [photometric redshift estimation](https://en.wikipedia.org/wiki/Photometric_redshift)), many astronomical analyses involve parameter estimation via something like curve-fitting, which can usually be re-cast as "machine learning" with appropriate caveats!
 - AB testing
   - pros and cons of AB testing vs simple metrics monitoring
