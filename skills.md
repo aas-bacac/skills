@@ -1,6 +1,13 @@
 # Skills astronomers need to transition outside of academia
 For some skills on this list, we'll specifically call out the equivalent skills astronomers generally already know along with these skill's industry analogues.  We use "industry" here to mean positions/fields that are outside of academia like those in tech, industry, government, etc.
 ## Data Science
+- A note on data science subdiscplines: we're using "data science" as an umbrella term for a spectrum of positions that includes
+  - data analyst: data analysts generate reports and dashboards that inform high level business decisions. Data analysts are generally very familiar with SQL and building out metrics dashboards and conducting ad hoc reporting.
+  - data scientist: data scientists do data anlystics and also add to that the ability to do sophisticated statistics and machine learning in order to inform high level business decisions. Frequently analysis is "offline", i.e. done in batch to produce reports or for e.g. email campaigns.
+  - applied scientist: applied scientists are similar to data scientists, but have more of a focus on machine learning and "online" activities like search ranking, homefeed personalization, and fraud. This often involves writing code that is ran in backend machine learning microservices in production.  Applied scientists occasionally publish their research.
+  - machine learning researcher: A focus on model tuning and new model development.  Frequently have PhDs in machine learning and publish their research.
+  - machine learning engineer: A focus on the infrastructure surrounding machine learning: Can involve directly deploying model microservices and also working on the infrastructure and logic around these services like search indices, feature stores, etc.
+  - Note the above subdisciplines all heavily overlap and are generally highly company-dependent.
 - SQL
   - astronomy equivalent: Create a SDSS-based sample of galaxies based on X, Y, and Z criteria to study A. Translate this to a sql-query to extract data from the SDSS online database.
   - industry: Create a sample of customers based on X, Y, and Z criteria to study A. Translate this to a sql-query to extract data from your company's database.
