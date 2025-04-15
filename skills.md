@@ -14,6 +14,7 @@ For some skills on this list, we'll specifically call out the equivalent skills 
   - deep Learning's particular success for images, text, and audio
   - when to use deep learning vs classical machine learning
   - generative AI for images, text, and audio
+  - astronomy equivalents: besides straightforward ML applied to science (e.g. photometric redshift estimation), many astronomical analyses involve parameter estimation via something like curve-fitting, which can usually be re-cast as "machine learning" with appropriate caveats!
 - AB testing
   - pros and cons of AB testing vs simple metrics monitoring
   - basic AB testing statistics
@@ -21,7 +22,7 @@ For some skills on this list, we'll specifically call out the equivalent skills 
     - power analysis
     - Seasonality gotchas
 - Software Engineering
-  - Basic data structures and when to use them (lists, queues, stacks, hashmaps/dictionaries, trees).  The ability the solve simple problems using these data structures and reason about your solutions's time and space complexity (aka "leetcoding").
+  - Basic data structures and when to use them (lists, queues, stacks, hashmaps/dictionaries, trees).  The ability to solve simple problems using these data structures and reason about your solutions's time and space complexity (aka "leetcoding").
   - basic pros/cons and uses of compiled languages (e.g. c++, Java) vs interpreted languages (python). Be able to give a basic outline for why python has become so popular for machine learning and scientific computing.
 
 ## Other Field
