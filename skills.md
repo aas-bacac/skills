@@ -14,7 +14,7 @@ For some skills on this list, we'll specifically call out the equivalent skills 
   - deep Learning's particular success for images, text, and audio
   - when to use deep learning vs classical machine learning
   - generative AI for images, text, and audio
-  - astronomy equivalents: besides straightforward ML applied to science (e.g. photometric redshift estimation), many astronomical analyses involve parameter estimation via something like curve-fitting, which can usually be re-cast as "machine learning" with appropriate caveats!
+  - astronomy equivalents: besides straightforward ML applied to science (e.g. [photometric redshift estimation](https://en.wikipedia.org/wiki/Photometric_redshift)), many astronomical analyses involve parameter estimation via something like curve-fitting, which can usually be re-cast as "machine learning" with appropriate caveats!
 - AB testing
   - pros and cons of AB testing vs simple metrics monitoring
   - basic AB testing statistics
