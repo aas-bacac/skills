@@ -26,6 +26,7 @@ For some skills on this list, we'll specifically call out the equivalent skills 
      - Understanding of pros and cons of prompted LLMs vs small fine-tuned models
   - astronomy equivalents: besides straightforward ML applied to science (e.g. [photometric redshift estimation](https://en.wikipedia.org/wiki/Photometric_redshift)), many astronomical analyses involve parameter estimation via something like curve-fitting, which can usually be re-cast as "machine learning" with appropriate caveats!
 - AB testing
+  - definition: controlled trials for the internet!
   - pros and cons of AB testing vs simple metrics monitoring
   - basic AB testing statistics
     - p-values, t-test, etc
