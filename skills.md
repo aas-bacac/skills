@@ -18,20 +18,19 @@ For some skills on this list, we'll specifically call out the equivalent skills 
   - evaluation: data splitting, metrics for classification, ranking, and regression.
   - classical vs deep Learning
   - linear models
-  - tree-based models
+  - [tree-based models](https://en.wikipedia.org/wiki/Decision_tree_learning)
   - deep Learning's particular success for images, text, and audio
   - when to use deep learning vs classical machine learning
   - generative AI for images, text, and audio (approximate umbrella term: "LLMs")
      - familiarity with basic prompting techniques and evaluations
      - Understanding of pros and cons of prompted LLMs vs small fine-tuned models
   - astronomy equivalents: besides straightforward ML applied to science (e.g. [photometric redshift estimation](https://en.wikipedia.org/wiki/Photometric_redshift)), many astronomical analyses involve parameter estimation via something like curve-fitting, which can usually be re-cast as "machine learning" with appropriate caveats!
-- AB testing
-  - definition: controlled trials for the internet!
+- [AB testing](https://en.wikipedia.org/wiki/A/B_testing)
   - pros and cons of AB testing vs simple metrics monitoring
   - basic AB testing statistics
     - p-values, t-test, etc
     - power analysis
-    - Seasonality gotchas
+    - [Seasonality](https://en.wikipedia.org/wiki/Seasonality) gotchas
 - Software Engineering
   - Basic data structures and when to use them (lists, queues, stacks, hashmaps/dictionaries, trees).  The ability to solve simple problems using these data structures and reason about your solutions's time and space complexity (aka "leetcoding").
   - basic pros/cons and uses of compiled languages (e.g. c++, Java) vs interpreted languages (python). Be able to give a basic outline for why python has become so popular for machine learning and scientific computing.
