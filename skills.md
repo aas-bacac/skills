@@ -16,6 +16,7 @@ For some skills on this list, we'll specifically call out the equivalent skills 
   - industry: Derive measurable quantities that directly probe the behavior of all customers or important subsets of customers.  Build a dashboard webpage that is automatically updated from your company's database to allow the company to make informed decision with real-time information.
 - Machine Learning
   - evaluation: data splitting, metrics for classification, ranking, and regression.
+  - [time series forecasting](https://en.wikipedia.org/wiki/Forecasting)
   - classical vs deep Learning
   - linear models
   - [tree-based models](https://en.wikipedia.org/wiki/Decision_tree_learning)
