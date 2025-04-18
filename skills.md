@@ -33,7 +33,7 @@ For some skills on this list, we'll specifically call out the equivalent skills 
     - power analysis
     - [Seasonality](https://en.wikipedia.org/wiki/Seasonality) gotchas
 - Software Engineering
-  - Basic data structures and when to use them (lists, queues, stacks, hashmaps/dictionaries, trees).  The ability to solve simple problems using these data structures and reason about your solutions's time and space complexity (aka "leetcoding").
+  - Basic data structures and when to use them (lists, queues, stacks, hashmaps/dictionaries, trees).  The ability to solve simple problems using these data structures and reason about your solutions's time and space complexity (aka "[leetcoding](https://en.wikipedia.org/wiki/LeetCode)").
   - basic pros/cons and uses of compiled languages (e.g. c++, Java) vs interpreted languages (python). Be able to give a basic outline for why python has become so popular for machine learning and scientific computing.
 
 ## Aerospace
