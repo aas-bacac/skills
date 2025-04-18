@@ -1,4 +1,4 @@
-# Skills astronomers need to transition outside of academia
+# Skills astronomers may need to transition outside of academia
 For some skills on this list, we'll specifically call out the equivalent skills astronomers generally already know along with these skill's industry analogues.  We use "industry" here to mean positions/fields that are outside of academia like those in tech, industry, government, etc.
 ## Data Science
 - A note on data science subdiscplines: we're using "data science" as an umbrella term for a spectrum of positions that includes
