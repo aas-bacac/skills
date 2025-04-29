@@ -7,4 +7,5 @@
 # TODO before we make this public
 - clean up commit history
 - Try to add at least one more discipline besides data science
+- add edit/comment instructions
 
