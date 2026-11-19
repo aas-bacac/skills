@@ -7,4 +7,4 @@ import { buildCareers } from '../lib/careers';
 const skills = buildCatalog(source);
 const careers = buildCareers(source, skills);
 ---
-<Concept title="Skills & careers atlas" number="03" variant="relationships"><RelationshipAtlas skills={skills} careers={careers} base={import.meta.env.BASE_URL} client:load /></Concept>
+<Concept title="Skills & careers atlas"><RelationshipAtlas skills={skills} careers={careers} base={import.meta.env.BASE_URL} client:load /></Concept>

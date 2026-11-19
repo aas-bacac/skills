@@ -1,51 +1,24 @@
 # Skills beyond astronomy
 
-A website for the [AAS-BACAC skills guide](https://github.com/aas-bacac/skills/wiki), prominently marked **(Under development)**. The atlas is the homepage at [aas-bacac.github.io/skills](https://aas-bacac.github.io/skills/). Three standalone career-exploration concepts use real wiki content without changing the wiki. The earlier integrated field guide is preserved at `/guide/`.
+A website for the [AAS-BACAC skills guide](https://github.com/aas-bacac/skills/wiki), prominently marked **(Under development)**. The atlas is the main experience at [aas-bacac.github.io/skills](https://aas-bacac.github.io/skills/), using real wiki content without changing the wiki. The flat wiki remains available through the header's "Read the skills guide" link.
 
-## Review the alternatives
+## Skills and careers atlas
 
-Start the local server and open the [comparison page](http://localhost:4321/concepts/). Each concept is a separate page, not another tab on a combined homepage.
+Start the local server and open http://localhost:4321. The design comparison, career-card prototype, and roadmap prototype are retired. Their old `/concepts/` URLs redirect to the atlas, including the former `/concepts/relationships/` atlas address.
 
-| Concept | Local URL | Primary question |
-| --- | --- | --- |
-| Searchable career explorer | http://localhost:4321/concepts/explorer/ | Which careers connect with my astronomy experience? |
-| Career-path roadmap | http://localhost:4321/concepts/roadmap/ | What topics could I explore toward a chosen role? |
-| Skills-to-careers atlas | http://localhost:4321/concepts/relationships/ | Where else might this capability be useful? |
+The interaction is astronomy experience -> industry equivalent -> career connection -> further wiki topic. Try **Query astronomical catalogs** (SQL), **Fit models to observations** (machine learning), or **Explain technical findings** (technical communication). Experience selections have reloadable links, for example `/#experience=communication`.
 
-The shared interaction is astronomy experience -> industry equivalent -> career connection -> further wiki topic. Try **Query astronomical catalogs** (SQL), **Fit models to observations** (machine learning), or **Explain technical findings** (technical communication). Experience selections have reloadable links, for example `/concepts/explorer/#experience=communication`.
+On desktop the atlas supports node selection, zoom, fit, a connections-only filter, and standard text controls for the same selections; nodes cannot be dragged and gesture panning is disabled. Up to 900px wide it uses a fixed native connection diagram instead of a touch-capturing canvas, with normal page scrolling, 16px controls and reading text, and touch targets of at least 44px. Switching off the filter shows all seven astronomy paths. Selecting a mobile career brings its details into view.
 
-The explorer searches role descriptions and associated source topics, with sector and connection filters. The roadmap has role navigation, suggested topic stages, and source detail. On desktop the atlas supports node selection, zoom, fit, a connections-only filter, and standard text controls for the same selections; nodes cannot be dragged and gesture panning is disabled. Up to 900px wide it uses a fixed native connection diagram instead of a touch-capturing canvas, with normal page scrolling, 16px controls and reading text, and touch targets of at least 44px. Switching off the filter shows all seven astronomy paths. Selecting a mobile career brings its details into view. Card and roadmap selections also bring their detail area into view on smaller screens.
+Career names and five role descriptions are extracted from the source Markdown. The wiki names systems engineer and test engineer without describing them; the atlas explicitly preserves that gap. Role-topic connections and astronomy entry labels are proposed editorial metadata. They are **not** assessed suitability, hiring requirements, prerequisite chains, or a complete training plan. Aerospace connections use field-wide topics, not role-specific source claims. The atlas does not invent salaries or credentials.
 
-Career names and five role descriptions are extracted from the source Markdown. The wiki names systems engineer and test engineer without describing them; the prototypes explicitly preserve that gap. Role-topic connections, astronomy entry labels, and reading order are proposed editorial metadata. They are **not** assessed suitability, hiring requirements, prerequisite chains, or a complete training plan. Aerospace connections use field-wide topics, not role-specific source claims. The prototypes do not invent salaries or credentials.
+### Readable source
 
-### Earlier field guide
-
-These original views remain unchanged:
-
-| View | Local URL | Question it helps explore |
-| --- | --- | --- |
-| Field guide | http://localhost:4321/guide/#view=guide | What topics interest me? |
-| Connections | http://localhost:4321/guide/#view=map | How do skills connect across fields? |
-| Cross-field matrix | http://localhost:4321/guide/#view=matrix | Where does a shared theme appear? |
-
-These three original views use the same content, search, category filters, topic drawer, and saved list. Topic links also work directly, for example `/guide/#view=guide&skill=sql`.
-
-The field guide is the default. The map uses a deterministic, grouped Cytoscape layout with zoom and pan. It has a keyboard-accessible topic index; on small screens the map scrolls within its own area and the index opens by default. The matrix groups topics into four editorial themes.
-
-Saved topics stay in the current browser using local storage. They can be removed individually, downloaded as a text list, or printed with their source content. No account, backend, analytics, or external AI service is involved. If storage is unavailable, the list still works for the current visit. The full source text remains readable without JavaScript.
-
-### Useful decisions after a review
-
-- Which presentation should be the main experience? The three views are alternatives for comparison, not a commitment to maintain all three forever.
-- Can a reviewer follow an astronomy example through to a role and another topic without losing their place, especially on a phone?
-- Are the proposed connections and theme assignments helpful and defensible? They are suggestions, not prerequisites, qualification scores, or career recommendations.
-- Do broad role descriptions belong beside individual skills, or deserve a separate section later?
-- Should sparse entries be expanded next, or should the guide first cover more fields?
-- Does the astronomy/industry comparison format deserve to become the primary organizing idea?
+The full source remains available in the wiki. The local `/guide/` route is retained for existing links and the no-JavaScript source fallback, but is not promoted as a design alternative in the atlas.
 
 ### Reference notes
 
-These sites informed interaction structure; their content, artwork, and datasets are not copied into the prototypes.
+These sites informed the early interaction designs; their content, artwork, and datasets are not copied into the website.
 
 - [roadmap.sh](https://roadmap.sh/) separates role-oriented paths from skill-oriented paths. The roadmap concept borrows the path-first structure, not an asserted universal curriculum.
 - [LabXchange CareerXplorer](https://www.labxchange.org/careerxplorer/explore/careers) uses a filterable directory and consistent role profiles. BACAC does not supply the salary and credential data shown there, so those fields are omitted here.
@@ -90,11 +63,11 @@ export LD_LIBRARY_PATH="$HOME/.local/share/skills-browser-libs/usr/lib/x86_64-li
 npm run test:e2e
 ```
 
-The suite covers both prototype generations: desktop/mobile interactions, source equivalents and role connections, search and sector filters, topic readers, mobile focus, persistence, download, deep links, map canvas pixels, direct mouse/touch node selection, zoom, text-based navigation, automated WCAG checks, no-JavaScript source access, and page overflow at 320, 375, 768, 1024, and 1920 pixels. Tests use the reduced-motion preference for stable screenshots and contrast checks. Automated checks do not replace a human accessibility review.
+The suite covers the atlas and retained source guide: desktop/mobile interactions, source equivalents and role connections, retired-route redirects, topic readers, mobile focus and swipe scrolling, readable controls, deep links, graph canvas pixels, fixed node positions, selection, zoom, automated WCAG checks, no-JavaScript source access, and page overflow at phone through large desktop sizes. Tests use the reduced-motion preference for stable screenshots and contrast checks. Automated checks do not replace a human accessibility review.
 
 Set `SKILLS_URL` to test another running instance. Review screenshots are generated into the locally ignored `review/` folder; Playwright failure traces go into `test-results/`.
 
-New concept screenshots are named `review/concept-{explorer,roadmap,relationships}-{desktop,mobile}.png`.
+Atlas screenshots are named `review/atlas-{desktop,mobile}.png`.
 
 ## Content and provenance
 
@@ -113,7 +86,7 @@ The nebula photograph is by [Jeremy Thomas on Unsplash](https://unsplash.com/pho
 
 Pages uses GitHub Actions. The deployment workflow is `.github/workflows/pages.yml`: pushes to the `website-prototype` branch install locked dependencies, run the content tests and production build, and deploy the static artifact. The `main` branch and separate wiki are not modified by publication.
 
-The public homepage is the atlas, with the development notice above the masthead. The comparison pages remain at `/skills/concepts/`, and the complete original field guide is at `/skills/guide/`.
+The public homepage is the atlas, with the development notice above the masthead and a direct link to the flat wiki. Retired `/skills/concepts/` URLs redirect to `/skills/`. The retained source-guide fallback is at `/skills/guide/`.
 
 Project Pages needs the repository subpath. The workflow obtains it from GitHub Pages configuration; to reproduce the production build locally:
 
