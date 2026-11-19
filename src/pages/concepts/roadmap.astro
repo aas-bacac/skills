@@ -1,0 +1,10 @@
+---
+import Concept from '../../layouts/Concept.astro';
+import CareerRoadmap from '../../components/concepts/CareerRoadmap';
+import source from '../../content/Skills.md?raw';
+import { buildCatalog } from '../../lib/catalog';
+import { buildCareers } from '../../lib/careers';
+const skills = buildCatalog(source);
+const careers = buildCareers(source, skills);
+---
+<Concept title="Career roadmaps" number="02" variant="roadmap"><CareerRoadmap skills={skills} careers={careers} base={import.meta.env.BASE_URL} client:load /></Concept>

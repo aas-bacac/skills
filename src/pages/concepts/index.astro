@@ -1,0 +1,16 @@
+---
+import Concept from '../../layouts/Concept.astro';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+const base = import.meta.env.BASE_URL;
+const concepts = [
+  { number: '01', title: 'Career explorer', slug: 'explorer', subtitle: 'A searchable, experience-led directory', question: 'Which careers connect with work I already do?', structure: 'Experience selector, astronomy/industry comparisons, career cards, and further topics.' },
+  { number: '02', title: 'Career roadmaps', slug: 'roadmap', subtitle: 'One career path at a time', question: 'What could I explore on the way toward this role?', structure: 'Role navigation, a staged topic map, and source detail alongside the path.' },
+  { number: '03', title: 'Skills & careers atlas', slug: 'relationships', subtitle: 'Relationships before categories', question: 'Where else might this capability be useful?', structure: 'A focused network of astronomy experience, wiki skills, and career connections.' },
+];
+---
+<Concept title="Design alternatives" variant="review">
+  <div class="concept-review"><header class="c-page-title"><span class="c-eyebrow">BACAC / DESIGN REVIEW</span><h1>Three ways into the same content.</h1><p>Separate prototypes for comparison, using the original astronomy-to-industry skills wiki.</p></header>
+    <div class="concept-options">{concepts.map((concept) => <article class={`concept-option option-${concept.slug}`}><span class="option-number">{concept.number}</span><div><span class="c-eyebrow">{concept.subtitle}</span><h2><a href={`${base}concepts/${concept.slug}/`}>{concept.title}<ArrowUpRight size={22} aria-hidden="true" /></a></h2><p class="option-question">{concept.question}</p><p>{concept.structure}</p></div><a class="c-command" href={`${base}concepts/${concept.slug}/`}>Open prototype <ArrowRight size={14} aria-hidden="true" /></a></article>)}</div>
+    <section class="review-criteria"><h2>The same interaction in each</h2><ol><li>Select an astronomy experience.</li><li>Find the corresponding industry language.</li><li>Explore related roles and another topic.</li></ol><p>All seven role names come from the wiki. Five have source descriptions; the two aerospace roles are explicitly marked as undeveloped. Career relationships and roadmap ordering are proposed editorial structure, not validated hiring requirements.</p></section>
+  </div>
+</Concept>

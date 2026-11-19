@@ -1,0 +1,42 @@
+{
+  "name": "astronomy-skills-field-guide",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro check && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "test": "node --test src/lib/*.test.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/react": "latest",
+    "@fontsource/dm-sans": "latest",
+    "@fontsource/newsreader": "latest",
+    "astro": "latest",
+    "cytoscape": "latest",
+    "lucide-react": "latest",
+    "marked": "latest",
+    "mdast-util-from-markdown": "latest",
+    "mdast-util-to-markdown": "latest",
+    "mdast-util-to-string": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sanitize-html": "latest"
+  },
+  "devDependencies": {
+    "@astrojs/check": "latest",
+    "@axe-core/playwright": "latest",
+    "@playwright/test": "latest",
+    "@types/mdast": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/sanitize-html": "latest",
+    "typescript": "latest"
+  }
+}
