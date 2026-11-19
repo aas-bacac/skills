@@ -186,9 +186,27 @@ select { border: 1px solid var(--c-line); background: white; padding: 11px 12px;
 .atlas-scroll { position: relative; overflow-x: auto; background-color: #fbfcfc; background-image: linear-gradient(#acb8bd16 1px, transparent 1px), linear-gradient(90deg, #acb8bd16 1px, transparent 1px); background-size: 30px 30px; border-top: 1px solid #e6ebeb; border-bottom: 1px solid #e6ebeb; }
 .atlas-scroll:focus-visible { outline-offset: -3px; }
 .atlas-column-headings { width: 100%; min-width: 850px; display: grid; grid-template-columns: repeat(3, 1fr); justify-items: center; padding: 19px 15px 0; font-size: 9px; color: var(--c-muted); }
-.atlas-canvas { width: 100%; min-width: 850px; height: 640px; cursor: grab; }
-.atlas-scroll.portrait .atlas-column-headings { display: none; }
-.atlas-scroll.portrait .atlas-canvas { min-width: 0; height: 620px; }
+.atlas-canvas { width: 100%; min-width: 850px; height: 640px; cursor: default; touch-action: pan-y pinch-zoom; }
+.atlas-scroll.mobile { overflow: visible; background: none; border: 0; }
+.atlas-mobile-network { display: grid; gap: 32px; padding: 0 20px; }
+.atlas-mobile-path + .atlas-mobile-path { border-top: 1px solid var(--c-line); padding-top: 32px; }
+.atlas-mobile-node { position: relative; display: flex; flex-direction: column; gap: 4px; justify-content: center; width: 100%; min-height: 64px; padding: 12px 42px 12px 15px; border: 1px solid #c2cec8; border-radius: 4px; background: white; text-align: left; touch-action: pan-y pinch-zoom; }
+.atlas-mobile-node span { font-size: 12px; line-height: 1.4; }
+.atlas-mobile-node strong { font-size: 16px; font-weight: 500; line-height: 1.5; overflow-wrap: anywhere; }
+.atlas-mobile-node > svg { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); }
+.atlas-mobile-node.astronomy { border-color: #80ae9e; }
+.atlas-mobile-node.astronomy[aria-pressed="true"] { background: #edf5f1; }
+.atlas-mobile-node.industry { border-color: #c4ae7c; background: #fcf9eb; }
+.atlas-mobile-node.career { border-color: #b4c6e8; }
+.atlas-mobile-node.career[aria-pressed="true"] { background: #315fbd; color: white; border-color: #315fbd; }
+.atlas-mobile-node.aerospace { border-color: #d3b1a7; }
+.atlas-mobile-node.aerospace[aria-pressed="true"] { background: #a64b34; border-color: #a64b34; }
+.atlas-mobile-arrow { display: block; margin: 8px auto; color: var(--c-muted); }
+.atlas-mobile-careers { list-style: none; display: grid; gap: 9px; margin: 0 0 0 16px; padding: 0 0 0 20px; border-left: 1px solid #aebdb6; }
+.atlas-mobile-careers li { position: relative; }
+.atlas-mobile-careers li::before { content: ''; position: absolute; top: 32px; left: -20px; width: 20px; border-top: 1px solid #aebdb6; }
+.atlas-scroll.mobile + .atlas-caption { font-size: 11px; }
+.atlas-inspector { scroll-margin-top: 18px; }
 .career-detail, .roadmap-detail { scroll-margin-top: 20px; }
 .atlas-loading { position: absolute; top: 50%; left: 30px; max-width: 280px; font-size: 12px; line-height: 1.8; }
 .atlas-caption { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; color: var(--c-muted); font-size: 9px; padding: 15px 0 0; line-height: 1.8; }
@@ -227,6 +245,38 @@ select { border: 1px solid var(--c-line); background: white; padding: 11px 12px;
 @media (max-width: 1200px) { .roadmap-layout { grid-template-columns: 210px minmax(0, 1fr); } .roadmap-main { padding: 30px; } .roadmap-workspace { grid-template-columns: minmax(0, 1fr) 280px; } .roadmap-map { padding-left: 14px; padding-right: 25px; } .roadmap-path-label { display: none; } }
 @media (max-width: 1000px) { .roadmap-workspace { grid-template-columns: 1fr; } .roadmap-detail { border-left: 0; border-top: 1px solid var(--c-line); padding: 25px 0; } .roadmap-map { padding-right: 10px; } .roadmap-detail .translation-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); } .roadmap-detail .translation-industry { border-top: 0; border-left: 1px solid var(--c-line); padding: 0 0 0 20px; } }
 @media (max-width: 1100px) { .atlas-workspace { grid-template-columns: 1fr; } .atlas-inspector { border-left: 0; border-top: 1px solid var(--c-line); padding: 28px 38px; } .atlas-career-index { flex-direction: row; flex-wrap: wrap; } .atlas-inspector > h2 { max-width: 500px; } }
+@media (max-width: 900px) {
+  .atlas-title { padding: 24px 20px; }
+  .atlas-title .c-page-title h1 { font-size: 34px; }
+  .atlas-title .c-page-title p { font-size: 15px; }
+  .atlas-photo { display: none; }
+  .atlas-toolbar { padding: 20px; gap: 12px; flex-wrap: wrap; }
+  .atlas-toolbar .c-select-label { width: 100%; font-size: 14px; }
+  .atlas-toolbar select { font-size: 16px; min-height: 48px; }
+  .atlas-toolbar .c-checkbox { margin: 0; font-size: 14px; min-height: 44px; }
+  .atlas-toolbar .c-checkbox input { width: 20px; height: 20px; }
+  .atlas-visual { padding: 24px 0; }
+  .atlas-caption { padding-left: 20px; padding-right: 20px; gap: 6px; flex-direction: column; }
+  .atlas-scroll.mobile + .atlas-caption { font-size: 12px; }
+  .atlas-inspector { padding: 24px 20px; }
+  .atlas-inspector > .c-eyebrow { font-size: 12px; }
+  .atlas-career-index { flex-direction: column; }
+  .atlas-career-index button { font-size: 16px; min-height: 48px; }
+  .atlas-role-detail { margin-top: 20px; padding-top: 20px; }
+  .atlas-role-detail .c-sector { font-size: 13px; }
+  .atlas-role-detail > p { font-size: 16px; line-height: 1.7; }
+  .atlas-role-detail h4 { font-size: 15px; }
+  .relationship-atlas .c-topic-links button { font-size: 16px; min-height: 44px; }
+  .relationship-atlas .c-source { font-size: 14px; min-height: 44px; }
+  .atlas-translation { padding-left: 20px; padding-right: 20px; }
+  .atlas-translation .translation-columns h3 { font-size: 14px; }
+  .atlas-translation .c-prose { font-size: 16px; }
+  .concept-relationships .c-topic-dialog .c-prose { font-size: 16px; }
+  .concept-relationships .c-topic-dialog .c-source { font-size: 14px; min-height: 44px; }
+  .concept-relationships .c-masthead-right a { font-size: 14px; min-height: 44px; }
+  .concept-relationships .c-footer { font-size: 12px; }
+  .concept-relationships .c-footer a { display: inline-flex; align-items: center; min-height: 44px; }
+}
 @media (max-width: 760px) {
   .c-masthead { padding: 17px 20px; min-height: 73px; gap: 12px; }
   .c-masthead-right { gap: 0; }
@@ -278,17 +328,5 @@ select { border: 1px solid var(--c-line); background: white; padding: 11px 12px;
   .roadmap-detail .translation-columns { grid-template-columns: 1fr; }
   .roadmap-detail .translation-industry { padding: 17px 0 0; border-left: 0; border-top: 1px solid var(--c-line); }
   .roadmap-other { flex-direction: column; gap: 15px; }
-  .atlas-title { padding: 28px 20px; }
-  .atlas-photo { display: none; }
-  .atlas-toolbar { padding: 20px; gap: 17px 12px; flex-wrap: wrap; }
-  .atlas-toolbar .c-select-label { width: 100%; }
-  .atlas-toolbar .c-checkbox { margin: 0; font-size: 10px; }
-  .atlas-controls { padding: 0; }
-  .atlas-visual { padding: 20px 0; }
-  .atlas-legend { padding-left: 20px; gap: 15px; }
-  .atlas-legend span { font-size: 9px; }
-  .atlas-caption { padding-left: 20px; padding-right: 20px; gap: 5px; }
-  .atlas-inspector { padding: 25px 20px; }
-  .atlas-translation { padding-left: 20px; padding-right: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; } }
