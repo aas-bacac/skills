@@ -7,6 +7,8 @@ const routes = ['explorer', 'roadmap', 'relationships'] as const;
 test('homepage opens the atlas with a prominent development notice', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Skills & careers atlas');
+  await expect(page.locator('.c-brand')).toHaveText('BACAC');
+  await expect(page.locator('.c-brand-initial')).toHaveCount(0);
   const notice = page.getByRole('complementary', { name: 'Development status' });
   await expect(notice).toBeVisible();
   await expect(notice).toContainText('(Under development)');

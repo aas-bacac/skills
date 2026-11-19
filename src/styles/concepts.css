@@ -12,9 +12,7 @@ h1, h2, h3, p, fieldset { margin: 0; }
 .c-skip { position: fixed; top: 10px; left: 10px; transform: translateY(-200%); padding: 12px; background: white; z-index: 20; }
 .c-skip:focus { transform: none; }
 .c-masthead { min-height: 78px; border-bottom: 1px solid var(--c-line); display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 35px; }
-.c-brand { display: flex; align-items: center; gap: 13px; text-decoration: none; font-size: 13px; }
-.c-brand-initial { font: 400 19px 'Newsreader', Georgia, serif; border: 1px solid #93afa1; border-radius: 50%; width: 41px; height: 41px; display: grid; place-items: center; color: var(--c-green); }
-.c-brand strong { margin-left: 5px; font-size: 16px; }
+.c-brand { display: flex; align-items: center; text-decoration: none; font-size: 16px; font-weight: 600; }
 .c-masthead-right { display: flex; align-items: center; gap: 30px; }
 .c-version { font-size: 10px; color: var(--c-muted); }
 .c-masthead-right a { font-size: 11px; text-decoration: none; display: inline-flex; gap: 7px; align-items: center; }
@@ -112,7 +110,6 @@ select { border: 1px solid var(--c-line); background: white; padding: 11px 12px;
 .c-dialog-comparison { padding-top: 22px; margin-top: 22px; border-top: 1px solid var(--c-line); }
 .c-dialog-comparison h3 { font-size: 13px; color: var(--c-green); margin-bottom: 12px; }
 .concept-roadmap { --c-green: #9c422f; --c-line: #e2e1dd; }
-.concept-roadmap .c-brand-initial { border-color: #ba8f83; }
 .roadmap-layout { display: grid; grid-template-columns: 234px minmax(0, 1fr); max-width: 1800px; margin: 0 auto; }
 .roadmap-sidebar { border-right: 1px solid var(--c-line); padding: 32px 22px; background: #f7f7f5; }
 .roadmap-sidebar nav section { margin-top: 32px; }
@@ -235,9 +232,6 @@ select { border: 1px solid var(--c-line); background: white; padding: 11px 12px;
   .c-masthead-right { gap: 0; }
   .c-version { display: none; }
   .c-masthead-right a { font-size: 10px; }
-  .c-brand { gap: 9px; font-size: 11px; }
-  .c-brand strong { font-size: 14px; }
-  .c-brand-initial { width: 34px; height: 34px; font-size: 16px; }
   .c-footer { padding: 22px 20px; font-size: 9px; }
   .career-explorer { grid-template-columns: 1fr; }
   .explorer-experience { grid-row: auto; padding: 25px 20px 20px; border-right: 0; border-bottom: 1px solid var(--c-line); }

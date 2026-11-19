@@ -23,7 +23,7 @@ const base = import.meta.env.BASE_URL;
     <DevelopmentNotice />
     <a class="c-skip" href="#concept-main">Skip to content</a>
     <header class="c-masthead">
-      <a class="c-brand" href={`${base}concepts/`}><span class="c-brand-initial">AAS</span><span>BACAC <strong>Skills</strong></span></a>
+      <a class="c-brand" href={`${base}concepts/`}>BACAC</a>
       <div class="c-masthead-right"><span class="c-version">{number ? `DESIGN ${number} / ${title}` : 'DESIGN EXPLORATION'}</span><a href={`${base}concepts/`}>Compare alternatives <ArrowUpRight size={13} aria-hidden="true" /></a></div>
     </header>
     <main id="concept-main"><slot />{number && <noscript><style is:inline>astro-island { display: none; }</style><p class="c-no-script">The interactive prototypes require JavaScript. <a href={`${base}guide/`}>Read the complete source guide</a>.</p></noscript>}</main>
